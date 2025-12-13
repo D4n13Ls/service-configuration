@@ -1,7 +1,10 @@
 spring:
   application:
     name: Clientes-ms
-
+  
+  cloud:
+    config:
+        profile: local
 
 #DATASOURCE CONFIGURATIONS
   datasource:
