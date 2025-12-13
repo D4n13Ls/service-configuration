@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: Product-ms
+
+
+#DATASOURCE CONFIGURATIONS
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pruebaDB?useSSL=false
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: PostgresDev24
+
+#HIBERNATE CONFIGURATIONS
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: update
+
+#DATASOURCE POOLING CONFIGURATIONS
+      hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+
+#REDIS CONFIGURATION
+  data:
+    redis:
+      host: localhost
+      port: 6739
+      password:
+      timeout: 2s
+      #lettuce:
+       #pool:
+        #enabled: true
+        #max-active: 8
+        #max-idle: 8
+        #min-idle: 0
+
+#EUREKA CONFIGURATION
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+
+server:
+  port: 8081 
